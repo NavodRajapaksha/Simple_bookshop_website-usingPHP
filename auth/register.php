@@ -12,12 +12,12 @@
             $email = $_POST['email'];
             $password = $_POST['password'];
 
-            $insert = $pdo->prepare("INSERT INTO users (username, email, password) VALUES (:username, :email, :password)");
+            $insert = $conn->prepare("INSERT INTO users (username, email, password) VALUES (:username, :email, :password)");
 
             $insert->execute([
                 ':username' => $username,
                 ':email' => $email,
-                ':password' => $password,
+                ':password' => password_hash($password, PASSWORD_DEFAULT),
             ]);
 
             header ("location: login.php");
