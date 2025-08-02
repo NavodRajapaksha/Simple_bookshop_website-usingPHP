@@ -1,3 +1,13 @@
+<?php
+
+    session_start();
+
+    define("APPURL" , "http://localhost/Simple_bookshop_website-usingPHP");
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
