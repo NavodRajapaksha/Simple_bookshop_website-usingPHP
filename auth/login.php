@@ -10,7 +10,7 @@
             $email = $_POST['email'];
             $password = $_POST['password'];
 
-            $login = $conn->prepare("SELECT * FROM users WHERE email = :email");
+            $login = $conn->prepare("SELECT *  FROM users WHERE email = :email");
             $login->execute(['email' => $email]);
 
 
